@@ -1,0 +1,9 @@
+services:
+  proxy:
+    build:
+      context: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
